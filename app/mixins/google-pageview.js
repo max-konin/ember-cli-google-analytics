@@ -9,7 +9,7 @@ export default Ember.Mixin.create({
   },
 
   pageviewToGA: Ember.on('didTransition', function(page, title) {
-    if !(this.get('fastboot.isFastBoot') {
+    if (!this.get('fastboot.isFastBoot')) {
       var page = page ? page : this.get('url');
       var title = title ? title : this.get('url');
 
